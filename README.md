@@ -4,17 +4,18 @@
 
 ### Simple simulation function without drugs:
 simulationWithoutDrug(viruses, maxPop, maxBirthProb, clearProb, trials)
-  -viruses: list of viruses
-  -maxPop: maximum population of viruses in the patient
-  -maxBirthProb: probability of reproduction for a virus
-  -clearProb: probability of decay for virus
-  -trials: trials to run and average simulation
+
+- viruses: list of viruses
+- maxPop: maximum population of viruses in the patient
+- maxBirthProb: probability of reproduction for a virus
+- clearProb: probability of decay for virus
+- trials: trials to run and average simulation
 
 
 ### Complex simulation function with drug treatment:
 simulationWithDrug(viruses,maxPop,maxBirthProb,clearProb,resistances,mutProb,trials)
-  -resistances: dictionary of resistances for viruses
-  -mutProb: probabuility of virus mutation in each time step
+  - resistances: dictionary of resistances for viruses
+  - mutProb: probabuility of virus mutation in each time step
 
 
 ### TreatedPatient(viruses,maxPop)
@@ -23,9 +24,8 @@ simulationWithDrug(viruses,maxPop,maxBirthProb,clearProb,resistances,mutProb,tri
 | ------------- |:-------------:| ----------|
 |`.addPrescription(drug)`| Adds a drug to patient, takes drug as string| pos = 'ibuprofen' |
 |`.getPrescriptions()`| Returns drugs in patient| **Takes no argument** |
-|`.getResistPop(drugResist)`| Returns the number of viruses that resist all of drugs in the arguement list| drugResist =['ibuprofen','octamox'] |
-|`.update()`| Update the state of the virus population in this patient for a single
-        time step| **Takes no argument** |
+|`.getResistPop(drugResist)`| Returns the number of viruses that resist all of drugs in the arguement list| drugResist =['ibuprofen','octamox']|
+|`.update()`| Update the state of the virus population in this patient for a single time step| **Takes no argument**|
 
 
 ## Sample Code:
