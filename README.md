@@ -29,4 +29,4 @@ simulationWithDrug(100,1000,0.1,0.05,{'guttagonol': False},0.005,50)
 
 ## Screenshots:
 
-{% gist 43e4a11f59017fa28925 %}
+<script src="https://gist.github.com/nicosandller/43e4a11f59017fa28925.js"></script>
