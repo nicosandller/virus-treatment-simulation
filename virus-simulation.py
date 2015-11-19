@@ -1,19 +1,9 @@
-
 # coding: utf-8
-
-# In[379]:
-
 import numpy
 import random
 import pylab
 import matplotlib.pyplot as plt
 
-get_ipython().magic(u'matplotlib inline')
-
-random.seed(0)
-
-
-# In[6]:
 
 class NoChildException(Exception):
     """
@@ -23,8 +13,6 @@ class NoChildException(Exception):
     modify/add any code.
     """
 
-
-# In[52]:
 
 class SimpleVirus(object):
 
@@ -92,9 +80,6 @@ class SimpleVirus(object):
         else:
             raise NoChildException('Didnt reproduce!')
 
-
-
-# In[362]:
 
 class Patient(object):
     """
@@ -172,9 +157,6 @@ class Patient(object):
                 pass
         self.viruses += new_viruses
 
-
-# In[393]:
-
 def simulationWithoutDrug(numViruses, maxPop, maxBirthProb, clearProb,
                           numTrials):
     """
@@ -209,12 +191,7 @@ def simulationWithoutDrug(numViruses, maxPop, maxBirthProb, clearProb,
     pylab.show()
 
 
-# In[963]:
-
-simulationWithoutDrug(100, 1000, 0.1, 0.05, 50)
-
-
-# In[972]:
+#simulationWithoutDrug(100, 1000, 0.1, 0.05, 50)
 
 class ResistantVirus(SimpleVirus):
     """
@@ -298,8 +275,6 @@ class ResistantVirus(SimpleVirus):
         else:
             raise NoChildException('Didnt reproduce!')
 
-
-# In[973]:
 
 class TreatedPatient(Patient):
     """
@@ -405,8 +380,6 @@ class TreatedPatient(Patient):
         self.viruses += new_viruses
 
 
-# In[1037]:
-
 def simulationWithDrug(numViruses, maxPop, maxBirthProb, clearProb, resistances,
                        mutProb, numTrials):
     """
@@ -464,7 +437,4 @@ def simulationWithDrug(numViruses, maxPop, maxBirthProb, clearProb, resistances,
 # ## Running simulation
 #
 # #### simulation for 100 viruses with 0.1 prob of reproduction, 0.05 probability of clearing, no resistance to guttagonol, 0.005 prob of mutation, and 50 trials.
-
-# In[1039]:
-
-simulationWithDrug(100,1000,0.1,0.05,{'guttagonol': False},0.005,50)
+#simulationWithDrug(100,1000,0.1,0.05,{'guttagonol': False},0.005,50)
